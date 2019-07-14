@@ -1,0 +1,103 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>load</title>
+        <link rel="stylesheet" href="../static/css/main.css">
+    </head>
+    <body>
+        <div id="main">
+            <div id="top">
+                {% for h in border %}
+                <div id="border">
+                    <div class="pic">
+                       <img src="{% static h.pic %}">
+                        <div class="design">
+                            <p id="blue">{{ h.design }}</p>
+                        </div>
+                    </div>
+                    <div class="name">
+                        <p>{{ h.name }}</p>
+                    </div>
+                    <div class="skill">
+                        <div class="head">
+                            <img src="{% static h.head %}">
+                        </div>
+                        <div class="ski">
+                            <div class="ss">
+                                <div class="sk">
+                                    <img src="{% static h.sk1 %}">
+                                </div>
+                                <div class="sk">
+                                    <img src="{% static h.sk2 %}">
+                                </div>
+                            </div>
+                            <div class="ping">
+                                <div class="lv">
+                                    <img src="{% static h.ping %}">
+                                </div>
+                                <div class="num">
+                                    <p class="green">{{ h.value }}</p>
+                                </div>
+                                <div class="load">
+                                    <p class="blank">{{ h.load }}</p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+            <div id="middle">
+                <img src="{% static '/images/vs.jpg' %}" id="mid">
+            </div>
+            <div id="butt">
+                {% for h in up %}
+                <div id="up">
+                    <div class="pic">
+                        <img src="{% static h.pic %}">
+                        <div class="design">
+                            <p id="red">{{ h.design }}</p>
+                        </div>
+                    </div>
+
+                    <div class="name">
+                        <p>{{ h.name }}</p>
+                    </div>
+                    <div class="skill">
+                        <div class="head">
+                            <img src="{% static h.head %}">
+                        </div>
+                        <div class="ski">
+                            <div class="ss">
+                                <div class="sk">
+                                    <img src="{% static h.sk1 %}">
+                                </div>
+                                <div class="sk">
+                                    <img src="{% static h.sk2 %}">
+                                </div>
+                            </div>
+                            <div class="ping">
+                                <div class="lv">
+                                    <img src="{% static h.ping %}">
+                                </div>
+                                <div class="num">
+                                    <p class="green">{{ h.value }}</p>
+                                </div>
+                                <div class="load">
+                                    <p class="blank">{{ h.load }}</p>
+                                </div>
+                            </div>
+                        </div>
+
+                </div>
+            </div>
+                {% endfor %}
+            </div>
+        </div>
+
+
+    </body>
+</html>
